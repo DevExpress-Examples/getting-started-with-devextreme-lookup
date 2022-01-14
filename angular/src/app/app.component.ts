@@ -27,4 +27,14 @@ export class AppComponent {
     console.log(e.previousValue);
     console.log(e.value);
   }
+
+  groupTemplate(data: any) {
+    let countInvisible = 0;
+      for (let i = 0; i < data.items.length; i++) {
+        if (data.items[i].visible === false) {
+          countInvisible += 1;
+        }
+      }
+    return data.key + " (" + (data.items.length - countInvisible) + " tasks)";
+  }
 }

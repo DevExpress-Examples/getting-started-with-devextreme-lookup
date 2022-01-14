@@ -82,13 +82,20 @@ $(function() {
         searchMode: 'contains',
         searchExpr: ['Assignee', 'Subject'],
         minSearchLength: 2,
+        showDataBeforeSearch: true,
         onValueChanged: function(e) {
             console.log(e.previousValue);
             console.log(e.value);
         },
         grouped: true,
         groupTemplate: function (data, index, element) {
-            return data.key + " - " + data.items.length;
+            let countInvisible = 0;
+            for (let i = 0; i < data.items.length; i++) {
+                if (data.items[i].visible === false) {
+                    countInvisible += 1;
+                }
+            }
+            return data.key + " (" + (data.items.length - countInvisible) + " tasks)";
         },
         pageLoadMode: "nextButton",
         nextButtonText: "More",

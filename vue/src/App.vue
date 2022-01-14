@@ -1,4 +1,5 @@
 <template>
+    <div id="container">
         <DxLookup
             :data-source="dataSource"
             value-expr="ID"
@@ -6,6 +7,7 @@
             search-mode="contains"
             :searchExpr="['Assignee', 'Subject']"
             :min-search-length="2"
+            :show-data-before-search="true"
             @value-changed="onValueChanged"
             :grouped="true"
             group-template="group-list"
@@ -14,7 +16,7 @@
             item-template="list-item"
         >
             <template #group-list="{ data }">
-                {{ data.key + " - " + data.items.length }}
+                {{ groupTemplate(data) }}
             </template>
             <template #list-item="{ data: itemData }">
                 {{ itemData.disabled ? '\u274C ' + itemData.Subject : '\u2705 ' + itemData.Subject }}
@@ -24,6 +26,7 @@
                 :show-title="false"
             />
         </DxLookup>
+    </div>
 </template>
 
 <script>
@@ -53,7 +56,24 @@
             onValueChanged(e) {
                 console.log(e.previousValue);
                 console.log(e.value);
+            },
+            groupTemplate(data) {
+                let countInvisible = 0;
+                for (let i = 0; i < data.items.length; i++) {
+                    if (data.items[i].visible === false) {
+                        countInvisible += 1;
+                    }
+                }
+                return data.key + " (" + (data.items.length - countInvisible) + " tasks)";
             }
         }
     }
 </script>
+
+<style>
+    #container {
+        width: 500px;
+        height: 500px;
+        padding-top: 5px;
+    }
+</style>

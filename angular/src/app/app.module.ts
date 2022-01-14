@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DxLookupModule } from 'devextreme-angular';
 
@@ -11,7 +9,6 @@ import { DxLookupModule } from 'devextreme-angular';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     DxLookupModule
   ],
   providers: [],

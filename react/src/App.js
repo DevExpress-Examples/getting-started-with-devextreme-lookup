@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
  
 import 'devextreme/dist/css/dx.light.css';
  
@@ -18,8 +18,14 @@ const dataSource = new DataSource({
 const searchExpression = ['Assignee', 'Subject'];
 
 const renderListGroup = (data) => {
+    let countInvisible = 0;
+    for (let i = 0; i < data.items.length; i++) {
+        if (data.items[i].visible === false) {
+            countInvisible += 1;
+        }
+    }        
     return (
-        <div>{ data.key + " - " + data.items.length }</div>
+        <div>{ data.key + " (" + (data.items.length - countInvisible) + " tasks)" }</div>
     );
 }
 
@@ -36,25 +42,28 @@ function App() {
     }, []);
 
     return (
-        <Lookup
-            dataSource={dataSource}
-            valueExpr="ID"
-            displayExpr="Subject"
-            searchMode="contains"
-            searchExpr={searchExpression}
-            minSearchLength={2}
-            onValueChanged={onValueChanged}
-            grouped={true}
-            groupRender={renderListGroup}
-            pageLoadMode="nextButton"
-            nextButtonText="More"
-            itemRender={renderListItem}
-        >
-            <DropDownOptions
-                closeOnOutsideClick={true}
-                showTitle={false}
-            />
-        </Lookup>
+        <div id="container">
+            <Lookup
+                dataSource={dataSource}
+                valueExpr="ID"
+                displayExpr="Subject"
+                searchMode="contains"
+                searchExpr={searchExpression}
+                minSearchLength={2}
+                showDataBeforeSearch={true}
+                onValueChanged={onValueChanged}
+                grouped={true}
+                groupRender={renderListGroup}
+                pageLoadMode="nextButton"
+                nextButtonText="More"
+                itemRender={renderListItem}
+            >
+                <DropDownOptions
+                    closeOnOutsideClick={true}
+                    showTitle={false}
+                />
+            </Lookup>
+        </div>
     ); 
 }
  

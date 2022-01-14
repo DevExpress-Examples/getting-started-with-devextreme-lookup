@@ -1,26 +1,29 @@
-<dx-lookup
-    [dataSource]="dataSource"
-    valueExpr="ID"
-    displayExpr="Subject"
-    searchMode="contains"
-    [searchExpr]="['Assignee', 'Subject']"
-    [minSearchLength]="2"
-    (onValueChanged)="onValueChanged($event)"
-    [grouped]="true"
-    groupTemplate="listGroup"
-    pageLoadMode="nextButton"
-    nextButtonText="More"
-    itemTemplate="listItem"
->
-    <dxo-drop-down-options 
-        closeOnOutsideClick="true"
-        [showTitle]="false"
+<div id="container">
+    <dx-lookup
+        [dataSource]="dataSource"
+        valueExpr="ID"
+        displayExpr="Subject"
+        searchMode="contains"
+        [searchExpr]="['Assignee', 'Subject']"
+        [minSearchLength]="2"
+        [showDataBeforeSearch]="true"
+        (onValueChanged)="onValueChanged($event)"
+        [grouped]="true"
+        groupTemplate="listGroup"
+        pageLoadMode="nextButton"
+        nextButtonText="More"
+        itemTemplate="listItem"
     >
-    </dxo-drop-down-options>
-    <div *dxTemplate="let data of 'listGroup'">
-        {{ data.key + " - " + data.items.length }}
-    </div>
-    <div *dxTemplate="let itemData of 'listItem'">
-        {{ itemData.disabled ? '\u274C ' + itemData.Subject : '\u2705 ' + itemData.Subject }}
-    </div>
-</dx-lookup>
+        <dxo-drop-down-options 
+            closeOnOutsideClick="true"
+            [showTitle]="false"
+        >
+        </dxo-drop-down-options>
+        <div *dxTemplate="let data of 'listGroup'">
+            {{ groupTemplate(data) }}
+        </div>
+        <div *dxTemplate="let itemData of 'listItem'">
+            {{ itemData.disabled ? '\u274C ' + itemData.Subject : '\u2705 ' + itemData.Subject }}
+        </div>
+    </dx-lookup>
+</div>
