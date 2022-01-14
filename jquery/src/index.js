@@ -8,8 +8,7 @@ $(function() {
         }, {
             ID: 2,
             Assignee: "Mr. John Heart",
-            Subject: "Google AdWords Strategy",
-            visible: false
+            Subject: "Google AdWords Strategy"
         }, {
             ID: 3,
             Assignee: "Mr. John Heart",
@@ -89,13 +88,7 @@ $(function() {
         },
         grouped: true,
         groupTemplate: function (data, index, element) {
-            let countInvisible = 0;
-            for (let i = 0; i < data.items.length; i++) {
-                if (data.items[i].visible === false) {
-                    countInvisible += 1;
-                }
-            }
-            return data.key + " (" + (data.items.length - countInvisible) + " tasks)";
+            return data.key + " (" + data.items.length + " tasks)";
         },
         pageLoadMode: "nextButton",
         nextButtonText: "More",

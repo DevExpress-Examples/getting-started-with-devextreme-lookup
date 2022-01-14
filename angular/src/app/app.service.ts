@@ -5,7 +5,6 @@ import { Injectable } from '@angular/core';
         Assignee: string | undefined;
         Subject: string | undefined;
         disabled?: boolean | undefined;
-        visible?: boolean | undefined;
     }
     
     const employeesTasks: Task[] = [
@@ -17,8 +16,7 @@ import { Injectable } from '@angular/core';
         }, {
             ID: 2,
             Assignee: "Mr. John Heart",
-            Subject: "Google AdWords Strategy",
-            visible: false
+            Subject: "Google AdWords Strategy"
         }, {
             ID: 3,
             Assignee: "Mr. John Heart",

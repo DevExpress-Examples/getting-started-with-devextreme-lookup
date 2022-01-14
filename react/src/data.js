@@ -7,8 +7,7 @@ export const employeesTasks = [
     }, {
         ID: 2,
         Assignee: "Mr. John Heart",
-        Subject: "Google AdWords Strategy",
-        visible: false
+        Subject: "Google AdWords Strategy"
     }, {
         ID: 3,
         Assignee: "Mr. John Heart",

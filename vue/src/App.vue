@@ -16,7 +16,7 @@
             item-template="list-item"
         >
             <template #group-list="{ data }">
-                {{ groupTemplate(data) }}
+                {{ data.key + " (" + data.items.length + " tasks)" }}
             </template>
             <template #list-item="{ data: itemData }">
                 {{ itemData.disabled ? '\u274C ' + itemData.Subject : '\u2705 ' + itemData.Subject }}
@@ -56,15 +56,6 @@
             onValueChanged(e) {
                 console.log(e.previousValue);
                 console.log(e.value);
-            },
-            groupTemplate(data) {
-                let countInvisible = 0;
-                for (let i = 0; i < data.items.length; i++) {
-                    if (data.items[i].visible === false) {
-                        countInvisible += 1;
-                    }
-                }
-                return data.key + " (" + (data.items.length - countInvisible) + " tasks)";
             }
         }
     }

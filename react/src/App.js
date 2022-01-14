@@ -17,15 +17,9 @@ const dataSource = new DataSource({
 
 const searchExpression = ['Assignee', 'Subject'];
 
-const renderListGroup = (data) => {
-    let countInvisible = 0;
-    for (let i = 0; i < data.items.length; i++) {
-        if (data.items[i].visible === false) {
-            countInvisible += 1;
-        }
-    }        
+const renderListGroup = (data) => {        
     return (
-        <div>{ data.key + " (" + (data.items.length - countInvisible) + " tasks)" }</div>
+        <div>{ data.key + " (" + data.items.length + " tasks)" }</div>
     );
 }
 
