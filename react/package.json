@@ -38,6 +38,6 @@
     ]
   },
   "devDependencies": {
-    "devextreme-themebuilder": "^21.2.4"
+    "devextreme-themebuilder": "^21.1.3"
   }
 }
