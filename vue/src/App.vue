@@ -22,7 +22,7 @@
                 {{ itemData.disabled ? '\u274C ' + itemData.Subject : '\u2705 ' + itemData.Subject }}
             </template>
             <DxDropDownOptions 
-                :close-on-outside-click="true"
+                :hide-on-outside-click="true"
                 :show-title="false"
             />
         </DxLookup>

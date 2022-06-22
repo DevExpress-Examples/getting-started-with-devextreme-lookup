@@ -53,7 +53,7 @@ function App() {
                 itemRender={renderListItem}
             >
                 <DropDownOptions
-                    closeOnOutsideClick={true}
+                    hideOnOutsideClick={true}
                     showTitle={false}
                 />
             </Lookup>

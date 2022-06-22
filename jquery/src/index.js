@@ -96,7 +96,7 @@ $(function() {
             return itemData.disabled ? '\u274C ' + itemData.Subject : '\u2705 ' + itemData.Subject;
         }, 
         dropDownOptions: {
-            closeOnOutsideClick: true,
+            hideOnOutsideClick: true,
             showTitle: false
         }
     });
