@@ -4,6 +4,26 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 
-# Getting Started with DevExtreme Lookup
+# DevExtreme Lookup - Getting Started 
 
-This repository stores the source code for the following tutorial: [Getting Started with Lookup](https://js.devexpress.com/Documentation/Guide/UI_Components/Lookup/Getting_Started_with_Lookup/).
+This repository stores the code examples of the Lookup component for the [Getting Started with Lookup](https://js.devexpress.com/Documentation/Guide/UI_Components/Lookup/Getting_Started_with_Lookup/) tutorial. This tutorial explains how to create a Lookup, bind it to data, configure search, and customize Lookup appearance.
+
+<div align="center"><img src="./lookup.png" /></div>
+
+## Files to Review
+
+- **Angular**
+    - [app.component.html](angular/src/app/app.component.html)
+    - [app.component.ts](angular/src/app/app.component.ts)
+- **jQuery**
+    - [index.js](jquery/src/index.js)
+- **React**
+    - [App.js](react/src/App.js)
+- **Vue**
+    - [App.vue](vue/src/App.vue)
+
+## Documentation
+
+- [Getting Started with Lookup](https://js.devexpress.com/Documentation/Guide/UI_Components/Lookup/Getting_Started_with_Lookup/)
+
+- [Lookup - API Reference](https://js.devexpress.com/Documentation/ApiReference/UI_Components/dxLookup/)
