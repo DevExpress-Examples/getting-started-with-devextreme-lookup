@@ -17,11 +17,13 @@ This repository stores the code examples of the Lookup component for the [Gettin
     - [app.component.html](Angular/src/app/app.component.html)
     - [app.component.ts](Angular/src/app/app.component.ts)
 - **jQuery**
+    - [index.html](jQuery/src/index.html)
     - [index.js](jQuery/src/index.js)
 - **React**
-    - [App.js](React/src/App.js)
+    - [App.tsx](React/src/App.tsx)
 - **Vue**
     - [App.vue](Vue/src/App.vue)
+    - [LookupContent.vue](Vue/src/components/LookupContent.vue)
 
 ## Documentation
 

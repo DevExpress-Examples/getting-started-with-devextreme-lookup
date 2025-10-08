@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import HomeContent from '../components/HomeContent.vue';
+import LookupContent from '../components/LookupContent.vue';
 </script>
 
 <template>
-  <HomeContent text="Count"/>
+  <LookupContent/>
 </template>
 
