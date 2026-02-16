@@ -9,7 +9,7 @@
 
 This repository stores the source code for the following tutorial: [Getting Started with Lookup](https://js.devexpress.com/Documentation/Guide/UI_Components/Lookup/Getting_Started_with_Lookup/).
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=getting-started-with-devextreme-lookup&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=getting-started-with-devextreme-lookup&~~~was_helpful=no)
 
