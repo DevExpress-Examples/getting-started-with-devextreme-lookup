@@ -6,10 +6,11 @@ import { Task } from './app.types';
 import { AppService } from './app.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  providers: [AppService],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    providers: [AppService],
+    standalone: false
 })
 export class AppComponent {
   employeesTasks: Task[];
