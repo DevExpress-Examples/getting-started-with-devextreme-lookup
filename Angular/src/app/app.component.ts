@@ -5,12 +5,14 @@ import { DxLookupTypes } from 'devextreme-angular/ui/lookup';
 import { Task } from './app.types';
 import { AppService } from './app.service';
 
+import { DxLookupModule } from 'devextreme-angular/ui/lookup';
+
 @Component({
     selector: 'app-root',
+    imports: [DxLookupModule],
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
     providers: [AppService],
-    standalone: false
 })
 export class AppComponent {
   employeesTasks: Task[];
