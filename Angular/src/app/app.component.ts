@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import notify from 'devextreme/ui/notify';
 import DataSource from 'devextreme/data/data_source';
 import { DxLookupTypes } from 'devextreme-angular/ui/lookup';
@@ -12,6 +12,7 @@ import { DxLookupModule } from 'devextreme-angular/ui/lookup';
     imports: [DxLookupModule],
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     providers: [AppService],
 })
 export class AppComponent {
